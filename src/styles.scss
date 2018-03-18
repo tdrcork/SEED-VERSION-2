@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/theming";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+$config: mat-typography-config();
+
+body {
+  margin: 0 auto;
+}
+
+.billboard {
+  height: 800px;
+  padding: 25px 50px;
+  margin-bottom:  50px;
+}
+
+.page-title {
+  margin-top: 80px;
+  height: 100px !important;
+  margin-bottom: 20px;
+}
+
+.spacer {
+  height: 700px;
+}
+
+.card-info {
+  height: 500px;
+}
