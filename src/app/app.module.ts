@@ -1,12 +1,16 @@
 /* FILES */
 
 import { environment } from '../environments/environment';
-
+import { AppRoutingModule } from './app-routing.module';
 /* ANGULAR */
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import Amplify, { Auth } from 'aws-amplify';
+import AuthClass from 'aws-amplify/lib/Auth/Auth';
+import { User } from 'aws-amplify/node_modules/aws-sdk/clients/mq';
 
 /* NGRX */
 import { StoreModule } from '@ngrx/store';
@@ -48,9 +52,14 @@ import { MaterialModule } from './shared/material.module';
   ],
   imports: [
     BrowserModule,
-    StoreModule,
     FlexLayoutModule,
-    MaterialModule
+    MaterialModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpModule,
+    StoreModule.forRoot(reducers),
+    AppRoutingModule,
   ],
   providers: [UIService, AuthService],
   bootstrap: [AppComponent]

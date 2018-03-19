@@ -1,3 +1,36 @@
-<p>
-  sign-in works!
-</p>
+
+<mat-toolbar fxLayout fxLayoutAlign="center center" class="page-title" color="primary">
+  <h1 class="mat-headline">Sign In</h1>
+</mat-toolbar>
+
+<form (ngSubmit)="onSubmit()" #signinForm="ngForm" fxLayout fxLayoutAlign="center stretch">
+  <div fxFlex="1 1 auto"></div>
+
+  <div fxFlex>
+    <div fxLayout="column" fxLayoutAlign="center stretch">
+      <mat-form-field fxFlex>
+        <input matInput
+          type="text"
+          id="username"
+          name="username"
+          ngModel
+          placeholder="username or email"
+          required>
+      </mat-form-field>
+      <mat-form-field fxFlex>
+        <input matInput
+          type="password"
+          id="password"
+          name="password"
+          ngModel
+          placeholder="password"
+          required>
+      </mat-form-field>
+      <button mat-raised-button type="submit">Submit</button>
+    </div>
+  </div>
+
+  <div fxFlex="1 1 auto"></div>
+</form>
+
+<div class="spacer"></div>

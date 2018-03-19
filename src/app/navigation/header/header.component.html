@@ -1,3 +1,17 @@
-<p>
-  header works!
-</p>
+<mat-toolbar fxLayout
+  fxLayoutAlign="space-between center"
+  class="header"
+  color="primary">
+
+  <div fxFlex routerLink="/">
+    <button mat-button><h1>CAMERONS SEED(IN PROGRESS)</h1></button>
+  </div>
+
+  <div fxFlex></div>
+
+  <button *ngIf="!isAuthenticated" routerLinkActive="active" mat-button routerLink="/signup" fxFlex="5" >
+    Sign Up</button>
+
+  <button *ngIf="!isAuthenticated" routerLinkActive="active" mat-button routerLink="/signin" fxFlex="5" >
+    Sign In</button>
+</mat-toolbar>
