@@ -4,14 +4,17 @@
   color="primary">
 
   <div fxFlex routerLink="/">
-    <button mat-button><h1>CAMERONS SEED(IN PROGRESS)</h1></button>
+    <button mat-button><h1>{{ header.public.companyName }}</h1></button>
   </div>
 
   <div fxFlex></div>
 
-  <button *ngIf="!isAuthenticated" routerLinkActive="active" mat-button routerLink="/signup" fxFlex="5" >
-    Sign Up</button>
+  <a *ngIf="!isAuthenticated" routerLinkActive="active" mat-button routerLink="/signup">
+    {{header.public.links.first}}</a>
 
-  <button *ngIf="!isAuthenticated" routerLinkActive="active" mat-button routerLink="/signin" fxFlex="5" >
-    Sign In</button>
+  <a *ngIf="!isAuthenticated" routerLinkActive="active" mat-button routerLink="/signin">
+    {{header.public.links.second}}</a>
+
+  <a routerLinkActive="active" color="accent" mat-raised-button>
+    {{header.public.button}}</a>
 </mat-toolbar>
