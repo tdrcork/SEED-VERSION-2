@@ -1,29 +1,44 @@
+<mat-toolbar fxLayout fxLayoutAlign="center center" class="page-title" color="primary">
+  <h1 class="mat-headline">Sign Up</h1>
+</mat-toolbar>
 
-  <form fxLayout="column"
-        fxLayoutAlign="center stretch"
-        fxLayoutGap="10px" #f="ngForm"
-        (ngSubmit)="onSubmit(f)">
-        <div fxFlex="1 1 auto"></div>
+<form (ngSubmit)="onSubmit()" #registerForm="ngForm" fxLayout fxLayoutAlign="center center">
+  <div fxFlex></div>
+  <div fxFlex fxLayout="column" fxLayoutAlign="center stretch">
+
     <mat-form-field fxFlex>
-      <input type="username" matInput placeholder="Your username" ngModel name="username" email required #usernameInput="ngModel">
-      <mat-error *ngIf="usernameInput.hasError('required')">Field must not be empty.</mat-error>
-      <mat-error *ngIf="!usernameInput.hasError('required')">E-Mail is invalid.</mat-error>
+        <input matInput
+          type="text"
+          id="username"
+          name="username"
+          ngModel
+          placeholder="username"
+          required>
     </mat-form-field>
 
     <mat-form-field fxFlex>
-      <input type="email" matInput placeholder="Your email" ngModel name="email" email required #emailInput="ngModel">
-      <mat-error *ngIf="emailInput.hasError('required')">Field must not be empty.</mat-error>
-      <mat-error *ngIf="!emailInput.hasError('required')">E-Mail is invalid.</mat-error>
-    </mat-form-field >
-
-    <mat-form-field fxFlex hintLabel="Should be at least 6 characters long.">
-      <input type="password" matInput placeholder="Your password" ngModel name="password" required minlength="6" #pwInput="ngModel">
-      <mat-hint align="end">{{ pwInput.value?.length }} / 6</mat-hint>
-      <mat-error>Has to be at least 6 characters long.</mat-error>
+      <input matInput
+        type="text"
+        id="email"
+        name="email"
+        ngModel
+        placeholder="email"
+        required>
     </mat-form-field>
 
-    <button *ngIf="!(isLoading$ | async)" type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Submit</button>
-    <mat-spinner *ngIf="isLoading$ | async"></mat-spinner>
-    <div fxFlex="1 1 auto"></div>
-  </form>
-  <div class="spacer"></div>
+    <mat-form-field fxFlex>
+      <input matInput
+        type="password"
+        id="password"
+        name="password"
+        ngModel
+        placeholder="password"
+        required>
+    </mat-form-field>
+
+    <button mat-raised-button type="submit">Submit</button>
+  </div>
+  <div fxFlex></div>
+</form>
+
+<div class="spacer"></div>
