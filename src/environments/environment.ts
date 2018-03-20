@@ -48,8 +48,8 @@ export const header = {
         companyName: 'Full Stack Seed',
         slogan: 'deployment in minutes',
         links: {
-            first: 'How it Works',
-            second: 'Create a Website',
+            first: 'Sign Up',
+            second: 'Sign In',
         },
         button: 'View Source'
     }
