@@ -18,7 +18,7 @@ export const cognitoCredentials = {
     // OPTIONAL - Amazon Cognito Web Client ID (26-char alphanumeric string)
         userPoolWebClientId: '3dqpsm0ka08ito407ja8qff3nk',
     // OPTIONAL - Enforce user authentication prior to accessing AWS resources or not
-        mandatorySignIn: false,
+        mandatorySignIn: true,
     // OPTIONAL - Configuration for cookie storage
         cookieStorage: {
         // REQUIRED - Cookie domain (only required if cookieStorage is provided)
@@ -32,4 +32,3 @@ export const cognitoCredentials = {
         }
     }
 };
-

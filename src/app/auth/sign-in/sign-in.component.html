@@ -1,4 +1,3 @@
-
 <mat-toolbar fxLayout fxLayoutAlign="center center" class="page-title" color="primary">
   <h1 class="mat-headline">Sign In</h1>
 </mat-toolbar>
@@ -27,7 +26,8 @@
         required>
     </mat-form-field>
 
-    <button mat-raised-button type="submit">Submit</button>
+    <button *ngIf="!(isLoading$ | async)" type="submit" mat-raised-button color="primary">Submit</button>
+    <mat-spinner *ngIf="isLoading$ | async"></mat-spinner>
   </div>
   <div fxFlex></div>
 </form>

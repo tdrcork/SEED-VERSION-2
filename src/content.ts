@@ -7,6 +7,9 @@ export const miniHeader = {
     public: {
         first: 'login',
         second: 'register'
+    },
+    private: {
+        first: 'logout'
     }
 };
 
@@ -19,6 +22,11 @@ export const header = {
             second: 'Sign In',
         },
         button: 'View Source'
+    },
+    private: {
+        links: {
+            first: 'Logout'
+        }
     }
 };
 

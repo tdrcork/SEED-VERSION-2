@@ -36,7 +36,8 @@
         required>
     </mat-form-field>
 
-    <button mat-raised-button type="submit">Submit</button>
+    <button *ngIf="!(isLoading$ | async)" type="submit" mat-raised-button color="primary">Submit</button>
+    <mat-spinner *ngIf="isLoading$ | async"></mat-spinner>
   </div>
   <div fxFlex></div>
 </form>

@@ -9,7 +9,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import Amplify, { Auth } from 'aws-amplify';
-import AuthClass from 'aws-amplify/lib/Auth/Auth';
 import { User } from 'aws-amplify/node_modules/aws-sdk/clients/mq';
 
 /* NGRX */
@@ -37,6 +36,7 @@ import { AuthService } from './auth/controller/auth.service';
 /* Design Modules */
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from './shared/material.module';
+import { ConfirmComponent } from './auth/confirm/confirm.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +48,8 @@ import { MaterialModule } from './shared/material.module';
     FooterComponent,
     HomeComponent,
     PricingComponent,
-    ContactComponent
+    ContactComponent,
+    ConfirmComponent
   ],
   imports: [
     BrowserModule,

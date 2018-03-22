@@ -1,14 +1,19 @@
 import { Action } from '@ngrx/store';
 
-export const SET_AUTHENTICATED = '[Auth] Set Authenticated';
-export const SET_UNAUTHENTICATED = '[Auth] Set Unauthenticated';
+export const SET_NO_USER = '[Auth] No User Exists';
+export const SET_NEW_USER = '[Auth] User is unconfirmed';
+export const SET_CONFIRMED_USER = '[Auth] User is Confirmed';
 
-export class SetAuthenticated implements Action {
-  readonly type = SET_AUTHENTICATED;
+export class SetNoUser implements Action {
+  readonly type = SET_NO_USER;
 }
 
-export class SetUnauthenticated implements Action {
-  readonly type = SET_UNAUTHENTICATED;
+export class SetNewUser implements Action {
+  readonly type = SET_NEW_USER;
 }
 
-export type AuthActions = SetAuthenticated | SetUnauthenticated;
+export class SetConfirmedUser implements Action {
+  readonly type = SET_CONFIRMED_USER;
+}
+
+export type AuthActions = SetNoUser | SetNewUser | SetConfirmedUser;

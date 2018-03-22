@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Store } from '@ngrx/store';
@@ -10,13 +10,12 @@ import * as fromRoot from '../../app.reducer';
 
 @Component({
   selector: 'app-signin',
-  providers: [ ],
   templateUrl: './sign-in.component.html',
   styleUrls: ['./sign-in.component.scss']
 })
 export class SignInComponent implements OnInit {
-  loginForm: FormGroup;
   isLoading$: Observable<boolean>;
+  @ViewChild('loginForm') form: NgForm;
 
   constructor(
     private authService: AuthService,
@@ -26,19 +25,11 @@ export class SignInComponent implements OnInit {
 
   ngOnInit() {
     this.isLoading$ = this.store.select(fromRoot.getIsLoading);
-
-    this.loginForm = new FormGroup({
-      email: new FormControl('', {
-        validators: [Validators.required, Validators.email]
-      }),
-      password: new FormControl('', { validators: [Validators.required] })
-    });
   }
 
   onSubmit() {
-    this.authService.login(
-      this.loginForm.value.email,
-      this.loginForm.value.password
-    );
+    const username = this.form.value.username;
+    const password = this.form.value.password;
+    this.authService.login(username, password);
   }
 }

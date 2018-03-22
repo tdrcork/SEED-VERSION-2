@@ -1,5 +1,5 @@
 <mat-toolbar fxLayout
-  fxLayoutAlign="space-between center"
+  fxLayoutAlign="center center"
   class="header"
   color="primary">
 
@@ -9,11 +9,14 @@
 
   <div fxFlex></div>
 
-  <a *ngIf="!isAuthenticated" routerLinkActive="active" mat-button routerLink="/signup">
+  <a routerLinkActive="active" mat-button routerLink="/signup">
     {{header.public.links.first}}</a>
 
-  <a *ngIf="!isAuthenticated" routerLinkActive="active" mat-button routerLink="/signin">
+  <a routerLinkActive="active" mat-button routerLink="/signin">
     {{header.public.links.second}}</a>
+
+  <a routerLinkActive="active" mat-button (click)="onLogout()">
+    {{header.private.links.first}}</a>
 
   <a routerLinkActive="active" color="accent" mat-raised-button>
     {{header.public.button}}</a>
