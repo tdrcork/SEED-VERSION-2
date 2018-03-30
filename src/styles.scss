@@ -8,11 +8,47 @@ body {
   margin: 0 auto;
 }
 
+/* Desktop Experience */
+.desktop-container {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.desktop-header, .desktop-footer {
+  height: 10vh;
+}
+
+.desktop-content {
+  height: 80vh;
+  overflow: auto;
+}
+
+/* saving in case other stuff doesn't work */
 .billboard {
-  height: 800px;
+  height: 100vh;
   padding: 25px 50px;
   margin-bottom:  50px;
 }
+
+/* Home Billboad with a Picture */
+.background-content_overlay {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+}
+
+.background-content {
+  padding: 3.125em .9375em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* random */
 
 .page-title {
   margin-top: 80px;
@@ -26,4 +62,28 @@ body {
 
 .card-info {
   height: 500px;
+}
+
+.logo {
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+
+/* Cards List For Services */
+.serviceCards {
+  border-radius: 2px;
+  
+}
+.serviceCards .title {
+  font-size: 22px
+}
+
+.serviceCards .card-content {
+  margin-bottom: 10px;
+  max-height: 100%;
+  padding: 20px;
+}
+
+.serviceCards .card-content p {
+  font-size: 18px;
 }

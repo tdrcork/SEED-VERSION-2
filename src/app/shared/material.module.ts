@@ -63,6 +63,7 @@ import {
     MatSortModule,
     MatPaginatorModule,
     MatSnackBarModule
-  ]
+  ],
+  declarations: []
 })
 export class MaterialModule {}

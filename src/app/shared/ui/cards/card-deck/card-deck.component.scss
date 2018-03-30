@@ -1,0 +1,35 @@
+.card-deck-container {
+    width: 100%;
+    width: 100vw;
+    position: relative;
+    border-radius: 2px;
+    padding: 10px 10px 30px;
+    margin: 10px 10px 10px 10px;
+    
+  }
+  
+  .card-item {
+    padding: 3px 3px 3px 3px;
+    margin-bottom: 20px;
+    width: 35%;
+    min-width: 100px;
+  }
+
+  .card {
+      margin: 30px 30px 30px 30px;
+      width: 100%;
+  }
+
+  .card-title {
+    font-weight: 400;
+    font-size: 22px;
+  }
+
+  .card-description {
+    font-weight: 300;
+    font-size: 18px;
+  }
+  .card-link {
+    color: #3188c9!important;
+    text-transform: uppercase;
+  }

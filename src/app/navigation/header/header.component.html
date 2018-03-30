@@ -1,7 +1,6 @@
 <mat-toolbar fxLayout
   fxLayoutAlign="center center"
-  class="header"
-  color="primary">
+  class="header">
 
   <div fxFlex routerLink="/">
     <button mat-button><h1>{{ header.public.companyName }}</h1></button>
@@ -18,6 +17,6 @@
   <a routerLinkActive="active" mat-button (click)="onLogout()">
     {{header.private.links.first}}</a>
 
-  <a routerLinkActive="active" color="accent" mat-raised-button>
+  <a routerLinkActive="active" color="primary" mat-raised-button>
     {{header.public.button}}</a>
 </mat-toolbar>

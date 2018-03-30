@@ -7,7 +7,6 @@ import { environment, cognitoCredentials } from '../../../environments/environme
 import { UIService } from '../../shared/ui/ui.service';
 import { MatSnackBar } from '@angular/material';
 import * as fromRoot from '../../app.reducer';
-
 import * as UI from '../../shared/ui/ui.actions';
 import * as userState from './auth.actions';
 
@@ -16,8 +15,6 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 import Amplify, { Auth } from 'aws-amplify';
 import { SET_NO_USER, SET_NEW_USER, SET_CONFIRMED_USER } from './auth.actions';
-
-
 
 @Injectable()
 export class AuthService {
@@ -109,6 +106,7 @@ export class AuthService {
     })
     .catch(err => this.store.dispatch(new userState.SetNoUser()));
   }
+  
 /*
   sendResetPasswordEmail(username: string) {
     Auth.forgotPassword(username)

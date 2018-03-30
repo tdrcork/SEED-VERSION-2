@@ -61,6 +61,37 @@ export const home = {
     ]
 };
 
+export const serviceCards = {
+    cards: [
+        {
+            title: 'A nice Title',
+            description:  'Descriptions are great.  really great.  Make america great again',
+            action:  'Learn More'
+        },
+        {
+            title: 'A nice Title',
+            description:  'Descriptions are great.  really great.  Make america great again',
+            action:  'Learn More'
+        },        {
+            title: 'A nice Title',
+            description:  'Descriptions are great.  really great.  Make america great again',
+            action:  'Learn More'
+        },        {
+            title: 'A nice Title',
+            description:  'Descriptions are great.  really great.  Make america great again',
+            action:  'Learn More'
+        },        {
+            title: 'A nice Title',
+            description:  'Descriptions are great.  really great.  Make america great again',
+            action:  'Learn More'
+        },        {
+            title: 'A nice Title',
+            description:  'Descriptions are great.  really great.  Make america great again',
+            action:  'Learn More'
+        },
+    ]
+};
+
 export const footer = {
     companyName: 'Brouk Development'
 };

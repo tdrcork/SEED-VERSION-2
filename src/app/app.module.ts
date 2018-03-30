@@ -28,6 +28,10 @@ import { FooterComponent } from './navigation/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PricingComponent } from './pages/pricing/pricing.component';
 import { ContactComponent } from './pages/contact/contact.component';
+// shared ui 
+import { CardDeckComponent } from './shared/ui/cards/card-deck/card-deck.component';
+import { ImageLinkComponent } from './shared/ui/image-link/image-link.component';
+import { CardSingleComponent } from './shared/ui/cards/card-single/card-single.component';
 
 /* SERVICES */
 import { UIService } from './shared/ui/ui.service';
@@ -37,6 +41,8 @@ import { AuthService } from './auth/controller/auth.service';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from './shared/material.module';
 import { ConfirmComponent } from './auth/confirm/confirm.component';
+
+
 
 @NgModule({
   declarations: [
@@ -49,7 +55,10 @@ import { ConfirmComponent } from './auth/confirm/confirm.component';
     HomeComponent,
     PricingComponent,
     ContactComponent,
-    ConfirmComponent
+    ConfirmComponent,
+    CardDeckComponent,
+    CardSingleComponent,
+    ImageLinkComponent
   ],
   imports: [
     BrowserModule,
@@ -61,6 +70,7 @@ import { ConfirmComponent } from './auth/confirm/confirm.component';
     HttpModule,
     StoreModule.forRoot(reducers),
     AppRoutingModule,
+    MaterialModule
   ],
   providers: [UIService, AuthService],
   bootstrap: [AppComponent]

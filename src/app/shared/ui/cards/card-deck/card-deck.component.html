@@ -1,0 +1,21 @@
+<div fxLayout="row wrap"
+  fxLayoutGap="30px"
+  fxLayoutAlign="center center"
+  fxFlex.md="70"
+  fxHide.xs
+  class="card-deck-container mat-elevation-z4">
+    <div *ngFor="let service of services" class="card-item">
+      <div class="card mat-typography">
+        <mat-card>
+          <mat-card-content>
+            <h2>{{service.title}}</h2>
+            <p>{{service.description}}</p>
+          </mat-card-content>
+          <mat-divider></mat-divider>
+          <mat-card-actions>
+            <a mat-button class="mat-title card-link">Learn More</a>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+</div>
