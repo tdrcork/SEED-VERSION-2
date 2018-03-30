@@ -30,7 +30,6 @@ import { PricingComponent } from './pages/pricing/pricing.component';
 import { ContactComponent } from './pages/contact/contact.component';
 // shared ui 
 import { CardDeckComponent } from './shared/ui/cards/card-deck/card-deck.component';
-import { ImageLinkComponent } from './shared/ui/image-link/image-link.component';
 import { CardSingleComponent } from './shared/ui/cards/card-single/card-single.component';
 
 /* SERVICES */
@@ -58,7 +57,6 @@ import { ConfirmComponent } from './auth/confirm/confirm.component';
     ConfirmComponent,
     CardDeckComponent,
     CardSingleComponent,
-    ImageLinkComponent
   ],
   imports: [
     BrowserModule,
