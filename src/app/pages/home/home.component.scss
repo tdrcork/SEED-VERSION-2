@@ -1,31 +1,8 @@
-.card-deck-container {
-    width: 100%;
-    max-width: 1200px;
-    position: relative;
-    border-radius: 2px;
-    padding: 10px 10px 10px 10px;
-}
-
-.card-item {
-    padding: 3px 3px 3px 3px;
-    width: 600px;
-    margin: 10px 10px 10px 10px;
-}
-.landing {
-    position: relative;
-}
-
-img.background {
+h1 {
+    text-align: center;
     color: white;
-    object-fit: cover;
-    z-index: -1;
-    margin-top: 80px;
-    text-rendering: optimizeLegibility;
-}
+} 
 
 .text {
-    position: absolute;
-    opacity: 1;
-    z-index: 1;
     color: white;
 }
